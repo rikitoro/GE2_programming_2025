@@ -41,3 +41,10 @@ Hello, C world!!!
 インラインの \\( \int x dx = \frac{x^2}{2} + C \\) 数式はこう。
 数式だけの別行はこう。
 $$\int_{-\infty}^{∞} d x\ x^2$$
+
+```lean : sample.lean
+def fib : ℕ → ℕ
+  | 0     => 0
+  | 1     => 2
+  | n + 2 => fib n + fib (n + 1)
+```
