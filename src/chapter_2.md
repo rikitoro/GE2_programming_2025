@@ -1,4 +1,3 @@
-# Chapter 2
 # 第 2 章 : C 言語の基礎
 
 ## 例題 2-1 : フローチャートによるプログラムの設計
@@ -14,7 +13,7 @@
 
 |要素|説明|
 |----|----|
-|<img src="./assets/ch02_terminal.png" width="30%"> | 端子 : プログラムの開始や終了を表す|
+|<img src="./assets/ch02_terminal.png" width="30%">| 端子 : プログラムの開始や終了を表す|
 |<img src="./assets/ch02_preparation.png" width="30%">| 準備 : 使用する変数の宣言などを行う |
 |<img src="./assets/ch02_process.png" width="30%">| 処理 : 計算や変数の代入などをおこなう|
 |<img src="./assets/ch02_data.png" width="30%">| データ : プログラムへの入出力を表す|
@@ -152,7 +151,6 @@ DESCRIPTION
 次のプログラムの `Ayshi Hanako` の部分を自分の名前に変更したプログラムを作成し、コンパイルし実行して、その動作を確認しましょう。
 
 ``` c : name.c
-// IS 99 愛子花子
 #include <stdio.h>
 
 int main(void) {
@@ -178,6 +176,8 @@ C
 C
  CCC PROGRAMMING!
 ```
+
+---
 
 ### 演習 2-3 
 
