@@ -1,0 +1,81 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="ページ1" id="Do2R8YbBjsIG0Oqwl3gb">
+    <mxGraphModel dx="2214" dy="1518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-1" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-2" target="dQL6wDx0h7eH1XYwRV4I-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-2" value="開始" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1340" y="-30" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-4" target="dQL6wDx0h7eH1XYwRV4I-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-4" value="&lt;font face=&quot;Lucida Console&quot;&gt;&amp;nbsp;&amp;nbsp;整数型の変数&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&amp;nbsp; \(i\leftarrow 10\)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;Lucida Console&quot;&gt;&amp;nbsp; \( j\leftarrow 20\)&lt;/font&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;align=left;size=10;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1370" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-5" value="\(i, j\) の値&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;を出力&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="-1370" y="60" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-17" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-6" target="dQL6wDx0h7eH1XYwRV4I-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-6" value="\(i\leftarrow 30\)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1240" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-26" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-7" target="dQL6wDx0h7eH1XYwRV4I-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-7" value="\(j\leftarrow 3 \times j\)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1120" y="30" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-23" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-10" target="dQL6wDx0h7eH1XYwRV4I-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1200" y="90" />
+              <mxPoint x="-1140" y="90" />
+              <mxPoint x="-1140" y="-10" />
+              <mxPoint x="-1080" y="-10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-10" value="\(i, j\) の値&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;を出力&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="-1250" y="60" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-25" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-11" target="dQL6wDx0h7eH1XYwRV4I-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-11" value="\(i\leftarrow i+2\)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1120" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-22" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-12" target="dQL6wDx0h7eH1XYwRV4I-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-12" value="\(j\leftarrow i\)" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1240" y="30" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-14" value="終了" style="strokeWidth=1;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontFamily=Lucida Console;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="90" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-19" value="\(i, j\) の値&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;を出力&lt;/span&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="-1130" y="60" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-21" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.462;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-5" target="dQL6wDx0h7eH1XYwRV4I-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1320" y="90" />
+              <mxPoint x="-1260" y="90" />
+              <mxPoint x="-1260" y="-10" />
+              <mxPoint x="-1203" y="-10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dQL6wDx0h7eH1XYwRV4I-27" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=open;endFill=0;" edge="1" parent="1" source="dQL6wDx0h7eH1XYwRV4I-19" target="dQL6wDx0h7eH1XYwRV4I-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
