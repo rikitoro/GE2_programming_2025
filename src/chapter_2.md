@@ -2,7 +2,7 @@
 
 ## 例題 2-1 : フローチャートによるプログラムの設計
 
-プログラムの設計段階では、処理の流れを整理し、正しく処理が行得るかどうかを検討するため、フローチャートを作成するとよいです。
+プログラムの設計段階では、処理の流れを整理して正しく処理を行えるかどうかを検討するために、フローチャートを作成するとよいです。
 
 フローチャートの例を示します。
 
@@ -12,12 +12,12 @@
 フローチャートは次の表に示すような要素を組み合わせて、処理の流れを表します。
 
 |要素|説明|
-|----|----|
-|<img src="./assets/ch02_terminal.png" width="30%">| 端子 : プログラムの開始や終了を表す|
-|<img src="./assets/ch02_preparation.png" width="30%">| 準備 : 使用する変数の宣言などを行う |
-|<img src="./assets/ch02_process.png" width="30%">| 処理 : 計算や変数の代入などをおこなう|
-|<img src="./assets/ch02_data.png" width="30%">| データ : プログラムへの入出力を表す|
-|<img src="./assets/ch02_condition.png" width="30%">| 判断 : 条件を判断し処理を分岐する
+|:----:|----|
+| <img src="./assets/ch02_terminal.png" width="30%"> | 端子 : プログラムの開始や終了を表す|
+| <img src="./assets/ch02_preparation.png" width="30%"> | 準備 : 使用する変数の宣言などを行う |
+| <img src="./assets/ch02_process.png" width="30%"> | 処理 : 計算や変数の代入などをおこなう|
+| <img src="./assets/ch02_data.png" width="30%"> | データ : プログラムへの入出力を表す|
+| <img src="./assets/ch02_condition.png" width="30%"> | 判断 : 条件を判断し処理を分岐する
 
 例で示したフローチャートをもとにプログラムを作成すると以下のようになります。
 
