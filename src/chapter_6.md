@@ -446,109 +446,6 @@ Tuesday or Thursday
 
 ---
 
-### 例題 6-7 : if 文と switch 文の混在
-
-if 文どうしや switch 文どうしを組み合わせたり、
-if 文と switch 文を組み合わせることことで、
-複雑な分岐処理を実現することができます。
-
-次のプログラムは、if 文と switch 文を組み合わせた例です。
-ユーザーから入力された整数値に応じて、
-表示を変えるプログラムです。
-
-```c : if_switch.c
-#include <stdio.h>
-
-int main(void) {
-  int n;
-
-  printf("What's your favorite number? ");
-  scanf("%d", &n);
-
-  if (n >= 0) {
-    printf("Zero or Positive number.\n");
-    switch (n % 3) {
-      case 0:
-        printf("Wow! You've entered a multiple of 3! That's a shining and magnificent number, indeed! Well done! \n");
-        break;
-      case 1:
-        printf("Oh. That's a decently good number.\n");
-        break;
-      case 2:
-        printf("Hmm. That's not such a bad number.\n");
-        break;
-    }
-  } else {
-    printf("Negative number.\n");
-  }
-
-  return 0;
-}
-```
-
-このプログラムでは、まず if 文で、
-`int` 型の変数 `n` の値に対する条件 `n >= 0` 
-が真であるかどうかを判定して、
-次の1. 2. のように分岐が行われます。
-
-1. `n >= 0` が真である場合 :
-  まず `Zero or Positive number.` と表示されます。
-  続いて、switch 文により `n` を 3 で割った余り (`n % 3`) に応じてさらに分岐が行われます。
-    * `n % 3` の値が 0 の場合 :
-      `Wow! ...` と表示されます。
-    * `n % 3` の値が 1 の場合 :
-      `Oh. ...` と表示されます。
-    * `n % 3` の値が 2 の場合 :
-      `Hmm. ...` と表示されます。
-
-2. `n >= 0` が偽である場合 :
-  `Negative number.` と表示されます。
-
-プログラムのフローチャートを示します。
-フローチャートと、
-プログラム中の if 文と switch 文を見比べて、
-構造が一致していることを確認してください。
-
-![flowchart](./assets/flowchart_chap06_ifswitch.drawio.png)
-
-
-プログラムの実行結果を示します。
-1行目の行末の数値が、入力された数値を表しています。
-
-`n` として 42 を入力した場合の実行結果です。
-42 は 0 以上の数なので、`Zero or Positive number.` と表示されます。
-さらに、42 を 3 で割った余りは 0 なので、
-`Wow! ...` と表示されます。
-
-``` : 端末
-What's your favorite number? 42
-Zero or Positive number.
-Wow! You've entered a multiple of 3! That's a shining and magnificent number, indeed! Well done!
-```
-
-43 を入力した場合の実行結果です。
-43 は 0 以上の数なので、`Zero or Positive number.` と表示されます。
-さらに、43 を 3 で割った余りは 1 なので、
-`Oh. ...` と表示されます。
-
-``` : 端末
-What's your favorite number? 43
-Zero or Positive number.
-Oh. That's a decently good number.
-```
-
-
--1 を入力した場合の実行結果です。
--1 は 0 以上ではないため、
-`Negative number.` とだけ表示されます。
-
-``` : 端末
-What's your favorite number? -1
-Negative number.
-```
-
----
-
 ## 演習
 
 ### 演習 6-1
@@ -565,13 +462,19 @@ Negative number.
 年齢を入力すると、入場料を出力するプログラムを作成してください。
 なお、年齢は0以上の整数で入力されるものとします。
 
-期待される実行結果は以下の通りです。
+プログラムの処理の流れをフローチャートを作成して検討し、
+そのフローチャートに基づいてプログラムを作成してください。
 
+期待される実行結果の例を示します。
+1行目はプログラムへ入力する年齢を示しています。
+
+- 13歳の場合 : 大人料金
 ``` : 端末
 13
 2400 yen
 ```
 
+- 10際の場合 : 子供料金
 ``` : 端末
 10
 1200 yen
