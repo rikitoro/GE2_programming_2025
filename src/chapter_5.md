@@ -421,9 +421,9 @@ a >> 2 = 2B
 ### 例題 5-9 : 代入演算
 
 代入演算子 `=` は左辺の変数へ右辺の値を代入するものですが、
-代入演算と算術演算を組み合わせて同時に行うこともできます。
+代入と算術演算を組み合わせて同時に行うこともできます。
 
-次のプログラムは加算演算や乗算演算を代入演算子と組み合わせて行うプログラムです。
+次のプログラムは加算演算や乗算演算を代入と組み合わせて行うプログラムです。
 
 ```c : assignmentOp.c
 #include <stdio.h>
@@ -458,7 +458,7 @@ num = 60
 num = 120
 ```
 
-他の算術論理演算も代入演算と組み合わせて使うことができます。
+他の算術論理演算も代入と組み合わせて使うことができます。
 どのようなものがあるかについては、授業資料や以下のリンク先などを参照してください。
 - [The GNU C reference manual, 3.2 Assignment Operators](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Assignment-Operators)
 
@@ -478,14 +478,16 @@ int main(void) {
   double val_input, val_output;
 
   scanf("%lf", &val_input);
+
   val_output = (val_input > 0) ? val_input : 0;
+
   printf("val_output = %f\n", val_output);
   
   return 0;
 }
 ```
 
-`(val_input > 0L) ? val_input : 0` の部分が
+`(val_input > 0) ? val_input : 0` の部分が
 条件演算子 `?:` を用いているところです。
 `?` の左側に示された条件 `val_input > 0` が真 ( True ) であれば、
 `:` の左側にある値 `val_input` を返し、偽 ( False ) であれば `:` の右側の値 `0` が返されます。
