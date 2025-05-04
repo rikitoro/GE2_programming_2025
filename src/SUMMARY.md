@@ -7,5 +7,6 @@
 - [演算子](./chapter_5.md)
 - [Chapter 6](./chapter_6.md)
 - [Chapter 7](./chapter_7.md)
+- [演習課題](./exercise.md)
 
 
