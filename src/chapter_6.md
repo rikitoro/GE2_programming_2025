@@ -1,6 +1,6 @@
 # 第 6 章 : 分岐処理
 
-## 6.1 : if 文
+## if 文
 
 ### 例題 6-1 : if 文
 
@@ -59,7 +59,7 @@ positive number
 
 ---
 
-### 例題 6-2 : if-else 文
+### 例題 6-2 : if-else
 
 if 文の後に `else` を続けることで、
 条件式が偽の場合に実行する文を指定できます。
@@ -225,7 +225,7 @@ if 文の条件式 `15.0 <= temperature && temperature < 25.0` は、
 
 
 プログラムの実行結果を示します。
-1 行目の数値の部分は、入力された数値を表しています。
+1 行目の数値の部分は、入力された数値(室温)を表しています。
 
 21.5 を入力した場合は、条件式が真となるので、
 次のように、`comfortable` と表示されます。
@@ -254,7 +254,7 @@ switch 文を使うとプログラムを簡潔に書くことができます。
 
 次のプログラムは、`char` 型の値を入力して、
 入力された値に応じて曜日を表示するプログラムです。
-プログラムの動作をより詳しく説明すると、
+
 各曜日 Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday の
 頭文字の大文字 `M`, `T`, `W`, `F`, `S` を入力すると
 該当する曜日を表示し、それ以外の文字を入力すると `invalid` と表示します。
@@ -263,11 +263,11 @@ switch 文を使うとプログラムを簡潔に書くことができます。
 #include <stdio.h>
 
 int main(void) {
-  char weekday_initial;
+  char day_ch;
 
-  scanf("%c", &weekday_initial);
+  scanf("%c", &day_ch);
 
-  switch (weekday_initial) {
+  switch (day_ch) { // 制御式 day_ch の値によって分岐
     case 'M':
       printf("Monday\n");
       break;
@@ -292,8 +292,18 @@ int main(void) {
 }
 ```
 
+このプログラムでは、 scanf によってユーザーから入力された曜日の頭文字が
+char 型の変数 `day_ch` に格納されます。
+
 switch 文ではまず制御式を指定します。
-このプログラムでは、`char` 型の変数 `weekday_initial` を指定しています。
+このプログラムでは、`day_ch` を指定しています。
+
+
+
+
+
+
+
 続く`{` と `}` で囲まれたブロック内には、
 switch 文で行う処理を記述しますが、
 このブロック内には処理を分岐させるために、分岐先を示す
