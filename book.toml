@@ -8,7 +8,10 @@ title = "プログラミング基礎"
 # codeblock にファイル名を表示 see https://crates.io/crates/mdbook-codename
 [preprocessor.codename] 
 
+[preprocessor.pagetoc]
+
 [output.html]
 mathjax-support = true
 # 日本語検索 see https://blog.bridgey.dev/2023/06/14/search-japanese-on-mdbook/
-additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js"]
+additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js","theme/pagetoc.js"]
+additional-css = ["theme/pagetoc.css"]
