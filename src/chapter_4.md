@@ -142,6 +142,8 @@ int main(void) {
 ここで紹介したもの以外にも出力変換指定子は存在します。
 `printf` および出力変換指定の詳細な使い方については以下のリンク先などを参照してください。
 - [Microsoft Learn, 書式指定構文: printf および wprintf 関数](https://learn.microsoft.com/ja-jp/cpp/c-runtime-library/format-specification-syntax-printf-and-wprintf-functions?view=msvc-170)
+- [gnu c library manual, 12.12 Formatted Output](https://www.gnu.org/software/libc/manual/html_mono/libc.html#Formatted-Output)
+
 
 ---
 
@@ -252,6 +254,34 @@ Area of the rectagle : 23.000000
 
 ![flowchart](./assets/chap04_flowchart_rectangle.svg)
 
+
+---
+
+## コメント
+
+
+プログラム中にコメントを記述することができます。
+コメントはプログラムの説明やメモなどを記述するために使います。
+また、コメントはプログラムの実行には影響しません。
+
+### 例題 4-6 : コメントの使い方
+
+コメントは、`//` から行末までの部分をコメントとして扱います。
+また、`/*` から `*/` までの部分をコメントとして扱うこともできます。
+
+``` c : comment.c
+#include <stdio.h>
+
+/* これは
+    複数行にわたる
+    コメントです。 */
+
+int main(void) {
+  // これはコメントです。
+  printf("Hello, World!\n"); // これもコメントです。
+  return 0;
+}
+```
 
 ---
 
