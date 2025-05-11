@@ -508,7 +508,7 @@ switch 文を使って、次のようなプログラムを作成しましょう�
 - 0 の場合 : Coffee
 - 1 の場合 : Tea
 - 2 の場合 : Milk
-- それ以外の場合 : Invalid order number
+- それ以外の場合 : Invalid order
 
 
 プログラムの処理の流れをフローチャートを作成して検討し、
@@ -525,11 +525,11 @@ Enter your order number: Coffee (0), Tea (1) or milk (2)
 Tea
 ```
 
- - 5 を入力した場合 : Invalid order number と表示
+ - 5 を入力した場合 : Invalid order と表示
 ``` : 端末 
 Enter your order number: Coffee (0), Tea (1) or milk (2)
 5
-Invalid order number
+Invalid order
 ```
 
 
