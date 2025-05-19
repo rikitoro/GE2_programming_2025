@@ -36,12 +36,7 @@ if (条件式) {
 
 ### 例題 6-1 : if 文
 
-ある条件が成り立つか、
-成り立たないかによって行う処理を分岐させるには、
-if 文を使います。
-
-次のプログラムは、if 文を使って、
-入力された数値が正の数かどうかを判定し、
+次のプログラムは if 文を使って、入力された数値が正の数かどうかを判定し、
 正の数であれば positive number と表示し、
 そうでなければ何も表示しないプログラムです。
 
@@ -53,37 +48,37 @@ int main(void) {
 
   scanf("%d", &number);
 
-  if (number > 0) {
-    printf("positive number\n");
+  if (number > 0) { // 条件式
+    printf("positive number\n"); // 条件式が真のときに実行する文
   }
 
   return 0;
 }
 ```
 
-`if` の後に続く条件式 `number > 0` が真のとき、
-`{` と `}` で囲まれたブロック内の文が実行されます。
-すなわち、`mumber` が正の数の時は、
-`printf("positive number\n");` が実行され、
+if 文で指定されている条件式は `number > 0` です。
+この条件式が真となる場合、すなわち `mumber` の値が正となる場合は、`printf("positive number\n");` が実行されて
 `positive number` と表示されます。
 
-条件式が偽、すなわち、`mumber` がゼロまたは負の数の場合は、
-ブロック内の文は実行されず、なにも表示されません。
+一方、条件式が成り立たない場合、すなわち、`mumber` がゼロまたは負の数の場合は処理がスキップされ、なにも表示されません。
 
 このプログラムの処理の流れを示すフローチャートを次に示します。
 
-![flowchart](./assets/flowchart_chap06_positive.drawio.png)
+![flowchart](./assets/chap06_flowchart_positive.svg)
 
 プログラムの実行結果を示します。
 1 行目は、入力された数値を表しています。
-正の数を入力した場合は、positive number と表示されます。
+
+- 正の数を入力した場合 : 
+`positive number` と表示されます。
 
 ``` : 端末
 42
 positive number
 ```
 
-負の数を入力した場合は、何も表示されません。
+- 負の数を入力した場合 : 
+何も表示されません。
 
 ``` : 端末
 -1
