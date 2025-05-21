@@ -114,33 +114,37 @@ int main(void) {
 ```
 
 if 文の条件式 `number > 0` が成り立つときは、
-続くブロック内の文 `printf("positive number\n");` が実行されます。
+ `printf("positive number\n");` が実行されます。
 条件式が成り立たないとき、すなわち、`number` がゼロまたは負の数のときは、
 `else` の後に続くブロック内の文
 `printf("zero or negative number\n");` が実行されます。
 
 このプログラムの処理の流れを示すフローチャートを次に示します。
 
-![flowchart](./assets/flowchart_chap06_posneg.drawio.png)
+![flowchart](./assets/chap06_flowchart_pos_npos.svg)
 
 
 プログラムの実行結果を示します。
 1 行目は、入力された数値を表しています。
-正の数を入力した場合は次のように、`positive number` と表示されます。
+
+-  正の数を入力した場合 : 
+`positive number` と表示されます。
 
 ``` : 端末
 42
 positive number
 ```
 
-負の数を入力した場合は、`zero or negative number` と表示されます。
+- 負の数を入力した場合 :
+`zero or negative number` と表示されます。
 
 ``` : 端末
 -1
 zero or negative number
 ```
 
-ゼロを入力した場合も、`zero or negative number` と表示されます。
+- ゼロを入力した場合 : 
+`zero or negative number` と表示されます。
 
 ``` : 端末
 0
