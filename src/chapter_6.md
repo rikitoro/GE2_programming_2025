@@ -159,12 +159,10 @@ if 文の `else` のあとに if 文 ( if-else 文) を続けることで、
 最初の条件式が偽の場合に、
 さらに別の条件式を指定して処理を分岐させることができます。
 
-次のプログラムは、入力された数値が正の数かどうかを判定し、
-正の数であれば `positive number` 、
-負の数であれば `negative number` 、
-ゼロであれば `zero` と表示するプログラムです。
+次のプログラムは、入力された数値が正の数か、負の数か、ゼロかを判定し、
+それぞれの場合に応じて、`positive number` , `negative number` , `zero` と表示するプログラムです。
 
-```c : @ositive_negative_zero.c
+```c : positive_negative_zero.c
 #include <stdio.h>
 
 int main(void) {
@@ -184,40 +182,43 @@ int main(void) {
 }
 ```
 
-if 文の最初の条件式 `number > 0` が成り立つときは、
-続くブロック内の文 `printf("positive number\n");` が実行されます。
-条件式が成り立たないときは、`else if` に続く条件式 `number < 0` が評価されます。
-この条件式 `number < 0` が成り立つときは、
-続くブロック内の文 `printf("negative number\n");` が実行されます。
-最初の条件式も、2 番目の条件式も成り立たないときは、
-最後の `else` に続くブロック内の文 `printf("zero\n");` が実行されます。
+if 文の最初の条件式 `number > 0` が成り立つときは、`printf("positive number\n");` が実行されます。
+条件式が成り立たないときは、`else` に続く if 文が実行されます。
+すなわち 2 番目の条件式 `number < 0` が成り立つか成り立たないかが評価されて、
+この条件式が成り立つときは、 `printf("negative number\n");` が実行され、
+条件式が成り立たないときは、最後の `else` に続くブロック内の文 `printf("zero\n");` が実行されます。
 
 このプログラムの処理の流れを示すフローチャートを次に示します。
 
-![flowchart](./assets/flowchart_chap06_posnegzero.drawio.png)
+![flowchart](./assets/chap06_flowchart_posnegzero.drawio.png)
 
 プログラムの実行結果を示します。
 1 行目は、入力された数値を表しています。
-正の数を入力した場合は次のように、`positive number` と表示されます。
 
+- 正の数を入力した場合 : 
+`positive number` と表示されます。
 ``` : 端末
 42
 positive number
 ```
 
-負の数を入力した場合は、`negative number` と表示されます。
+- 負の数を入力した場合 :
+`negative number` と表示されます。
 
 ``` : 端末
 -1
 negative number
 ```
 
-ゼロを入力した場合は、`zero` と表示されます。
+- ゼロを入力した場合 : 
+`zero` と表示されます。
 
 ``` : 端末
 0
 zero
 ```
+
+---
 
 ### 例題 6-4 : 複雑な条件式
 
