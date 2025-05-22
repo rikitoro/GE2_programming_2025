@@ -10,8 +10,12 @@ title = "プログラミング基礎"
 
 [preprocessor.pagetoc]
 
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.0.3" # do not edit: managed by `mdbook-admonish install`
+
 [output.html]
 mathjax-support = true
 # 日本語検索 see https://blog.bridgey.dev/2023/06/14/search-japanese-on-mdbook/
 additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js","theme/pagetoc.js"]
-additional-css = ["theme/pagetoc.css"]
+additional-css = ["theme/pagetoc.css", "./assets/css/mdbook-admonish.css"]
