@@ -172,7 +172,7 @@ int main(void) {
 
   if (number > 0) {
     printf("positive number\n");
-  } else if (number < 0) {
+  } else if (number < 0) {  // 最初の条件式が偽のときに実行される
     printf("negative number\n");
   } else {
     printf("zero\n");
@@ -182,15 +182,15 @@ int main(void) {
 }
 ```
 
-if 文の最初の条件式 `number > 0` が成り立つときは、`printf("positive number\n");` が実行されます。
-条件式が成り立たないときは、`else` に続く if 文が実行されます。
+最初のif 文の条件式 `number > 0` が成り立つときは、`printf("positive number\n");` が実行されます。
+この条件式が成り立たないときは、`else` に続く if 文が実行されます。
 すなわち 2 番目の条件式 `number < 0` が成り立つか成り立たないかが評価されて、
-この条件式が成り立つときは、 `printf("negative number\n");` が実行され、
-条件式が成り立たないときは、最後の `else` に続くブロック内の文 `printf("zero\n");` が実行されます。
+条件が成り立つときは `printf("negative number\n");` が実行され、
+条件式が成り立たないときは、最後の `else` に続く文 `printf("zero\n");` が実行されます。
 
 このプログラムの処理の流れを示すフローチャートを次に示します。
 
-![flowchart](./assets/chap06_flowchart_posnegzero.drawio.png)
+![flowchart](./assets/chap06_flowchart_posnegzero.svg)
 
 プログラムの実行結果を示します。
 1 行目は、入力された数値を表しています。
