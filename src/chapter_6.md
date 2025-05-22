@@ -248,27 +248,30 @@ int main(void) {
 ```
 
 if 文の条件式 `15.0 <= temperature && temperature < 25.0` は、
-論理積 `&&` ( AND ) で結合された 2 つの条件式 `15.0 <= temperature` と
+論理積( AND ) `&&`  で結合された 2 つの条件式 `15.0 <= temperature` と
 `temperature < 25.0` が両方とも成り立つときに真となります。
 すなわち、`temperature` が 15.0 以上 25.0 未満のときに真となります。
 
 条件式を `15.0 <= temperature < 25.0` のようには記述しないことに注意してください。
 このように記述すると意図した通りには動作しません。
 
+このプログラムの処理の流れを示すフローチャートを次に示します。
+![flowchart](./assets/chap06_flowchart_temperature.svg)
+
 
 プログラムの実行結果を示します。
-1 行目の数値の部分は、入力された数値(室温)を表しています。
+1 行目は入力された数値(室温)を表しています。
 
-21.5 を入力した場合は、条件式が真となるので、
-次のように、`comfortable` と表示されます。
+- 21.5 を入力した場合 :
+条件式が真となるので comfortable と表示されます。
 
 ``` : 端末
 temperature? 21.5
 comfortable
 ```
 
-30.0 を入力した場合は、条件式が偽となるので、
-次のように、`uncomfortable` と表示されます。
+- 30.0 を入力した場合: 
+条件式が偽となるので、uncomfortable と表示されます。
 
 ``` : 端末
 temperature? 30.0
@@ -279,10 +282,39 @@ uncomfortable
 
 ## 6.2 : switch 文
 
+条件によって分ける処理の分岐が多い場合、switch 文を使うとプログラムを簡潔に書くことができます。
+整数値を取る制御式の値によって、処理を分岐させることができます。
+
+```c :
+switch (制御式) {
+  case 値1:
+    処理1;  // 制御式の値が 値1 のときに実行する処理
+    break;  // switch 文を抜ける
+  case 値2: 
+    処理2;  // 制御式の値が 値2 のときに実行する処理
+    break;  // switch 文を抜ける
+  default:  
+    処理3;  // 制御式の値が 値1, 値2 のいずれでもないときに実行する処理
+    break;  // switch 文を抜ける
+}
+```
+
+制御式には整数値や文字をとる変数や式を指定します。
+制御式の値が `case` で指定した値と一致する場合に、
+その `case` に続く処理が実行されます。
+各 `case` での処理の最後に `break` を記述することで、switch 文を抜けることができます。
+`break` がない場合は、次の `case` の処理が続けて実行されます。
+
+`default:` は、制御式の値が `case` で指定した値と一致しない場合に、
+実行される処理を指定するためのラベルです。
+(`default:` は省略することもできます。)
+
+フローチャートを使って、switch 文の処理の流れを示すと次のようになります。
+![flowchart](./assets/chap06_switch.svg)
+
+
 ### 例題 6-5 : switch 文
 
-条件によって分ける処理の分岐が多い場合、
-switch 文を使うとプログラムを簡潔に書くことができます。
 
 次のプログラムは、`char` 型の値を入力して、
 入力された値に応じて曜日を表示するプログラムです。
@@ -297,7 +329,7 @@ switch 文を使うとプログラムを簡潔に書くことができます。
 int main(void) {
   char day_ch;
 
-  scanf("%c", &day_ch);
+  scanf("%c", &day_ch);　
 
   switch (day_ch) { // 制御式 day_ch の値によって分岐
     case 'M':
@@ -326,70 +358,42 @@ int main(void) {
 
 このプログラムでは、 scanf によってユーザーから入力された曜日の頭文字が
 char 型の変数 `day_ch` に格納されます。
+switch 文では制御式としてこの `day_ch` を指定しています。
 
-switch 文ではまず制御式を指定します。
-このプログラムでは、`day_ch` を指定しています。
-
-
-
-
-
-
-
-続く`{` と `}` で囲まれたブロック内には、
-switch 文で行う処理を記述しますが、
-このブロック内には処理を分岐させるために、分岐先を示す
- `case` および `default` で構成される複数のラベルを記述します。
-このプログラムでは `case 'M':` から `case 'S':` までの
-5 つの `case` を使ったラベルと
-`default:` がラベルとなっています。
-
-switch 文では制御式を評価し、
-その値に応じて、`case` で指定した値と一致するかどうかを上から順に調べます。
-一致する `case` が見つかったら、そこへ処理がジャンプします。
-なお、制御式で評価される値、および `case` で指定する値は、
-整数値(`int` 型の値など)や文字(`char` 型の値)である必要があります。
-
-このプログラムにおいては、例えば、`weekday_initial` が `'T'` であれば、
-`case 'T':` に処理がジャンプし、
+例えば、`day_ch` の値が `T` である場合を考えましょう。
+このとき、ラベル `case 'T':` の場所に処理がジャンプし、
 `printf("Tuesday or Thursday\n");` が実行されます。
-続く `break` は、switch 文を抜けるための命令です。
-これにより、switch 文のブロックを抜けるので、
-続く `case 'W':` 以降の処理は実行されません。
-(`break` がないと、次の `case` の処理が続けて実行されてしまいます。)
+続いて、`break;` があるので、switch 文を抜けます。
 
-制御式で評価した値と一致する `case` が見つからない場合は、
-`default:` に処理がジャンプします。
-プログラムでは、`weekday_initial` が `'t'` である場合には、
-`case` で指定した値と一致するものがないため、
+もし、`day_ch` の値が `t` であった場合には、
+いずれの `case` にも当てはまらないので、
 `default:` に処理がジャンプし、
 `printf("invalid\n");` が実行されます。
 
 
 プログラムの処理の流れをフローチャートに示すと次のようになります。
 
-![flowchart](./assets/flowchart_chap06_weekday.drawio.png)
+![flowchart](./assets/chap06_weekday.svg)
+
 
 プログラムの実行結果を示します。
-1 行目は、入力された文字を表しています。
+1 行目は入力された文字を表しています。
 
-`M` を入力した場合の実行結果です。
+- `M` を入力した場合 :
 
 ``` : 端末
 M
 Monday
 ```
 
-`T` を入力した場合の実行結果です。
+- `T` を入力した場合 :
 
 ``` : 端末
 T
 Tuesday or Thursday
 ```
 
-小文字の `t` を入力した場合の実行結果です。
-この時はどの `case` にも当てはまらないので、
-`default` に処理がジャンプし、`invalid` と表示されます。
+- `t` を入力した場合 :
 
 ``` : 端末 
 t
@@ -412,11 +416,11 @@ invalid
 #include <stdio.h>
 
 int main(void) {
-  char weekday_initial;
+  char day_ch;
 
-  scanf("%c", &weekday_initial);
+  scanf("%c", &day_ch);
 
-  switch (weekday_initial) {
+  switch (day_ch) { // 制御式 day_ch の値によって分岐
     case 'M':
     case 'm':
       printf("Monday\n");
@@ -447,24 +451,25 @@ int main(void) {
 ```
 
 このプログラム中の switch 文では、例題 6-6 と同様に
-char 型の変数 `weekday_initial` を制御式として指定しています。
+char 型の変数 `day_ch` を制御式として指定しています。
 
-いま、`weekday_initial` の値が `T` である場合を考えます。  
-このとき、ラベル `case 'T':` の場所に処理がジャンプします。
-`case 'T':` の後には、命令が無く、特に `break` もありません。
-したがって、処理は次の `case 't':` の場所に続きます。
-ここには、`printf("Tuesday or Thursday\n");` という命令があるので、
-`Tuesday or Thursday` と表示されます。
+`day_ch` の値が `t` の場合には、処理が `case 't':` にジャンプするので、
+`Tuesday or Thursday` と表示され、続く `break` により switch 文での処理は終了します。
+
+もし、変数 `day_ch` の値が `T` である場合にはラベル `case 'T':` の場所に処理がジャンプします。
+このラベル `case 'T':` の後には、命令が無く、特に `break` もありません。
+したがって、処理は次の `case 't':` の場所に移ります。
+ここには、`printf("Tuesday or Thursday\n");` という命令があるので、`Tuesday or Thursday` と表示されます。
 続いて、`break` があるので、switch 文を抜けます。
-
-仮に `weekday_initial` の値が `t` であった場合には、
-処理が `case 't':` にジャンプするので、
-`Tuesday or Thursday` と表示され、続く `break` により、
-switch 文での処理は終了します。
 
 このように、`case` の後に `break` がない場合では、
 処理は次の `case` に続きます。
+このような動作を `fall-through` と呼びます。
+`fall-through` を利用することで、同じ処理を複数の `case` に対して指定することができます。
 
+
+このプログラムの処理の流れをフローチャートに示すと次のようになります。
+![flowchart](./assets/chap06_weekday2.svg)
 
 このプログラムの実行例を示します。
 1 行目は、入力された文字を表しています。
