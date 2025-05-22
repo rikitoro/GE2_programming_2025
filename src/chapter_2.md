@@ -122,9 +122,9 @@ Hello, world!
 $
 ```
 
-> **tips**
-> `man` コマンドを使うとシステムで提供されている C 言語の関数や、ファイルなどに関する情報が得られます。
-> `stdio` や `printf` などについて `man` コマンドを使って調べてみましょう。
+~~~admonish tips
+man コマンドを使うとシステムで提供されている C 言語の関数や、ファイルなどに関する情報が得られます。
+`stdio` や `printf` などについて man コマンドを使って調べてみましょう。
 
 ``` : 端末
 $ man stdio
@@ -144,6 +144,7 @@ DESCRIPTION
        The  standard  I/O library provides a simple and effi‐
        cient buffered stream I/O interface. (以下略)
 ```
+~~~
 
 ---
 
@@ -152,7 +153,7 @@ DESCRIPTION
 
 ### 演習 2-1 
 
-次のプログラムの `Ayshi Hanako` の部分を自分の名前に変更したプログラムを作成し、コンパイルし実行して、その動作を確認しましょう。
+次のプログラムの `Ayashi Hanako` の部分を自分の名前に変更したプログラムを作成し、コンパイルし実行して、その動作を確認しましょう。
 
 ``` c : name.c
 #include <stdio.h>
