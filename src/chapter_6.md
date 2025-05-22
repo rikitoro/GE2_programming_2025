@@ -368,7 +368,7 @@ switch 文では制御式としてこの `day_ch` を指定しています。
 もし、`day_ch` の値が `t` であった場合には、
 いずれの `case` にも当てはまらないので、
 `default:` に処理がジャンプし、
-`printf("invalid\n");` が実行されます。
+`printf("invalid\n");` が実行され、続く `break;` により switch 文を抜けます。
 
 
 プログラムの処理の流れをフローチャートに示すと次のようになります。
@@ -421,14 +421,14 @@ int main(void) {
   scanf("%c", &day_ch);
 
   switch (day_ch) { // 制御式 day_ch の値によって分岐
-    case 'M':
-    case 'm':
-      printf("Monday\n");
-      break;
-    case 'T':
-    case 't':
-      printf("Tuesday or Thursday\n");
-      break;
+    case 'M':  
+    case 'm': 
+      printf("Monday\n"); 
+      break;  
+    case 'T':   // day_ch の値が T のときはここに処理がジャンプ
+    case 't':   // day_ch の値が t のときはここに処理がジャンプ
+      printf("Tuesday or Thursday\n");  // day_ch の値が T または t のときに実行
+      break;                            // switch 文を抜ける
     case 'W':
     case 'w':
       printf("Wednesday\n");
@@ -462,29 +462,27 @@ char 型の変数 `day_ch` を制御式として指定しています。
 ここには、`printf("Tuesday or Thursday\n");` という命令があるので、`Tuesday or Thursday` と表示されます。
 続いて、`break` があるので、switch 文を抜けます。
 
-このように、`case` の後に `break` がない場合では、
-処理は次の `case` に続きます。
-このような動作を `fall-through` と呼びます。
-`fall-through` を利用することで、同じ処理を複数の `case` に対して指定することができます。
+このように、`case` の後に `break` がない場合では、処理は次の `case` に続きます。
+このような動作を fall-through と呼びます。
+fall-through を利用することで、同じ処理を複数の `case` に対して指定することができます。
 
 
 このプログラムの処理の流れをフローチャートに示すと次のようになります。
 ![flowchart](./assets/chap06_weekday2.svg)
 
+
 このプログラムの実行例を示します。
 1 行目は、入力された文字を表しています。
 
-`T` を入力した場合の実行結果です。
-
+- `t` を入力した場合 :
 ``` : 端末
-T
+t
 Tuesday or Thursday
 ```
 
-`t` を入力した場合の実行結果です。
-
+- `T` を入力した場合 :
 ``` : 端末
-t
+T
 Tuesday or Thursday
 ```
 
@@ -497,7 +495,7 @@ Tuesday or Thursday
 
 ### 演習 6-1
 
-架空のS水族館は、入場者の年齢によって入場料が決まります。
+M県S市にあるとある水族館は、入場者の年齢によって入場料が決まります。
 年齢と入場料の対応は以下の表のとおりです。
 
 | 券種 | 年齢 | 入場料(円) |
@@ -545,7 +543,7 @@ switch 文を使って、次のようなプログラムを作成しましょう�
 - 0 の場合 : Coffee
 - 1 の場合 : Tea
 - 2 の場合 : Milk
-- それ以外の場合 : Invalid order
+- それ以外の場合 : Water
 
 
 プログラムの処理の流れをフローチャートを作成して検討し、
@@ -562,11 +560,11 @@ Enter your order number: Coffee (0), Tea (1) or milk (2)
 Tea
 ```
 
- - 5 を入力した場合 : Invalid order と表示
+ - 5 を入力した場合 : Water と表示
 ``` : 端末 
 Enter your order number: Coffee (0), Tea (1) or milk (2)
 5
-Invalid order
+Water
 ```
 
 
@@ -600,3 +598,5 @@ int main(void) {
   return 0;
 }
 ```
+
+---
