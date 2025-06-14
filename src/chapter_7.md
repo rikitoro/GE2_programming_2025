@@ -310,7 +310,7 @@ int main(void) {
   double x; 
   double y;
 
-  for (double x = -1.0; x <= 2.01; x += 0.3) {
+  for (x = -1.0; x <= 2.01; x += 0.3) {
     y = x * x; // y を計算
     printf("%f %f\n", x, y); // x と y の値を表示
   }
