@@ -9,5 +9,6 @@
 - [繰り返し処理](./chapter_7.md)
 - [演習課題](./exercise.md)
 - [レポートの提出について](./report.md)
+- [付録:自分のPCでC言語の実習環境を作る](./appendix_wsl.md)
 
 
