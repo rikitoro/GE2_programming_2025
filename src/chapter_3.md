@@ -168,7 +168,7 @@ int main(void) {
   // (3) さらなる代入
   i = i + 2;   // i <- 32 (= 30 + 2)
   j = 3 * j;    // j <- 90 (= 3 * 30)
-  printf("(3) more, \n")
+  printf("(3) more, \n");
   printf("i = %d\n", i);  
   printf("j = %d\n", j);
 
